@@ -25,6 +25,7 @@ public class Consulta implements Serializable {
 	private String procedimento;
 	private String medico;
 	private String data;
+	private String valor;
 	
 	private AgendaStatus agendaStatus;
 	private OrcamentoStatus orcamentoStatus;
@@ -38,12 +39,13 @@ public class Consulta implements Serializable {
 		
 	}
 
-	public Consulta(String procedimento, String medico, String data, AgendaStatus agendaStatus,
+	public Consulta(String procedimento, String medico, String data, String valor ,AgendaStatus agendaStatus,
 			OrcamentoStatus orcamentoStatus, Cliente cliente) {
 		super();
 		this.procedimento = procedimento;
 		this.medico = medico;
 		this.data = data;
+		this.valor = valor;
 		this.agendaStatus = agendaStatus;
 		this.orcamentoStatus = orcamentoStatus;
 		this.cliente = cliente;
@@ -79,6 +81,14 @@ public class Consulta implements Serializable {
 
 	public void setData(String data) {
 		this.data = data;
+	}
+
+	public String getValor() {
+		return valor;
+	}
+
+	public void setValor(String valor) {
+		this.valor = valor;
 	}
 
 	public AgendaStatus getAgendaStatus() {

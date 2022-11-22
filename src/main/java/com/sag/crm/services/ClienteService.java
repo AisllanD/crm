@@ -35,9 +35,32 @@ public class ClienteService {
 		return obj.orElseThrow(() -> new ResourceNotFoundException(id));
 	}
 	
+	
+	public Cliente atualizaCadastroCliente(Long id, Cliente cliente) {
+		Cliente atualizaCliente = encontraClienteId(id);
+		
+		String atualizaNome = cliente.getNome();
+		String atualizaDataNascimento = cliente.getDataNascimento();
+		String atualizaEndereco = cliente.getEndereco();
+		String atualizaProfisao = cliente.getProfissao();
+		
+		atualizaCliente.setNome(atualizaNome);
+		atualizaCliente.setDataNascimento(atualizaDataNascimento);
+		atualizaCliente.setEndereco(atualizaEndereco);
+		atualizaCliente.setProfissao(atualizaProfisao);
+		
+		return clienteRepository.save(atualizaCliente);
+	}
+	
 	public Cliente atualizaEstagioAgendaMarcada(Long id) {
 		Cliente cliente = encontraClienteId(id);
 		cliente.setStatus(Status.AGENDA_MARCADA);
+		return cliente;
+	}
+	
+	public Cliente atualizaEstagioAgendaRealizada(Long id) {
+		Cliente cliente = encontraClienteId(id);
+		cliente.setStatus(Status.AGENDA_REALIZADA);
 		return cliente;
 	}
 	
