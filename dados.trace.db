@@ -202,3 +202,7 @@ select consultas0_.cliente_id as cliente_8_1_0_, consultas0_.id as id1_1_0_, con
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.base/java.lang.Thread.run(Thread.java:833)
+2022-11-22 08:58:29 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Data conversion error converting "200,00" [22018-214]
+2022-11-22 08:59:21 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Data conversion error converting "200,00" [22018-214]

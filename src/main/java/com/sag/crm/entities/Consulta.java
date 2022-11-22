@@ -25,7 +25,7 @@ public class Consulta implements Serializable {
 	private String procedimento;
 	private String medico;
 	private String data;
-	private String valor;
+	private Double valor;
 	
 	private AgendaStatus agendaStatus;
 	private OrcamentoStatus orcamentoStatus;
@@ -39,7 +39,7 @@ public class Consulta implements Serializable {
 		
 	}
 
-	public Consulta(String procedimento, String medico, String data, String valor ,AgendaStatus agendaStatus,
+	public Consulta(String procedimento, String medico, String data, Double valor ,AgendaStatus agendaStatus,
 			OrcamentoStatus orcamentoStatus, Cliente cliente) {
 		super();
 		this.procedimento = procedimento;
@@ -83,11 +83,11 @@ public class Consulta implements Serializable {
 		this.data = data;
 	}
 
-	public String getValor() {
+	public Double getValor() {
 		return valor;
 	}
 
-	public void setValor(String valor) {
+	public void setValor(Double valor) {
 		this.valor = valor;
 	}
 
