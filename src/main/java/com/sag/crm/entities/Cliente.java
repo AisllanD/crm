@@ -27,6 +27,7 @@ public class Cliente implements Serializable{
 	private String endereco;
 	private String dataNascimento;
 	private String profissao;
+	private Double valorTotal = 0.0;
 	
 	private Status status;
 	
@@ -38,7 +39,7 @@ public class Cliente implements Serializable{
 	}
 
 	public Cliente(String nome, String email, String celular, String endereco, String dataNascimento,
-			String profissao, Status status) {
+			String profissao, Double valorTotal,Status status) {
 		super();
 		this.nome = nome;
 		this.email = email;
@@ -46,6 +47,7 @@ public class Cliente implements Serializable{
 		this.endereco = endereco;
 		this.dataNascimento = dataNascimento;
 		this.profissao = profissao;
+		this.valorTotal = valorTotal;
 		this.setStatus(status);
 	}
 
@@ -103,6 +105,14 @@ public class Cliente implements Serializable{
 
 	public void setProfissao(String profissao) {
 		this.profissao = profissao;
+	}
+
+	public Double getValorTotal() {
+		return valorTotal;
+	}
+
+	public void setValorTotal(Double valorTotal) {
+		this.valorTotal = valorTotal;
 	}
 
 	public Status getStatus() {

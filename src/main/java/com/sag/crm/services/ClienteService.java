@@ -64,4 +64,16 @@ public class ClienteService {
 		return cliente;
 	}
 	
+	public Cliente atualizaEstagioOrcamentoRealizado(Long id) {
+		Cliente cliente = encontraClienteId(id);
+		cliente.setStatus(Status.ORÇAMENTO_REALIZADO);
+		return cliente;
+	}
+	
+	public Cliente atualizaEstagioOrcamentoFechado(Long id) {
+		Cliente cliente = encontraClienteId(id);
+		cliente.setStatus(Status.ORÇAMENTO_FECHADO);
+		return cliente;
+	}
+	
 }

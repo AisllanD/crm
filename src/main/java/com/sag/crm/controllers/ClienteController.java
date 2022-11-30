@@ -21,6 +21,7 @@ public class ClienteController {
 	@Autowired
 	private ClienteService clienteService;
 	
+
 	@PostMapping("/cliente")
 	public ResponseEntity<Cliente> cadastraLead(@RequestBody Cliente cliente){
 		return new  ResponseEntity<Cliente>(clienteService.cadastraLead(cliente), HttpStatus.OK);
@@ -36,5 +37,8 @@ public class ClienteController {
 	public ResponseEntity<Cliente> atualizaCadastroCliente(@PathVariable long id, @RequestBody Cliente cliente ){
 		return new  ResponseEntity<Cliente>(clienteService.atualizaCadastroCliente(id, cliente), HttpStatus.OK);
 	}
+	
+	
+	
 	
 }
