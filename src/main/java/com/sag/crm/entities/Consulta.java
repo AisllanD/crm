@@ -25,7 +25,7 @@ public class Consulta implements Serializable {
 	private String procedimento;
 	private String medico;
 	private String data;
-	private Double valor;
+	private Double valor = 0.0;
 	private String dataDePagamento;
 	
 	private AgendaStatus agendaStatus;
